@@ -25,10 +25,5 @@
     "react-icons": "^4.10.1",
     "react-toastify": "^9.1.3",
     "uuid": "^9.0.0"
-  },
-  "browserlist": [
-    ">0.2%",
-    "not dead",
-    "not op_mini all"
-  ]
+  }
 }
