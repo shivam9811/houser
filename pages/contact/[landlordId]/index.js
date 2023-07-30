@@ -2,9 +2,6 @@ import React, { useEffect, useState } from "react";
 import Meta from "@/components/Meta";
 
 function LandLordPage(props) {
-  const queryString = window.location.search;
-  const urlParams = new URLSearchParams(queryString);
-
   const [landlord, setLandlord] = useState(null);
   const [message, setMessage] = useState("");
   useEffect(() => {
@@ -53,11 +50,7 @@ function LandLordPage(props) {
                   onChange={onChange}
                 ></textarea>
               </div>
-              <a
-                href={`mailto:${landlord.email}?Subject=${urlParams.get(
-                  "listingName"
-                )}&body=${message}`}
-              >
+              <a href={`mailto:${landlord.email}?body=${message}`}>
                 <button type="button" className="primaryButton">
                   Send Message
                 </button>
